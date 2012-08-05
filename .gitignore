@@ -1,2 +1,5 @@
 # Ignore temporary files.
 *~
+
+# Ignore settings.pp
+manifests/settings.pp
