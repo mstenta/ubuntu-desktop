@@ -4,3 +4,9 @@
 [submodule "modules/gnome"]
 	path = modules/gnome
 	url = git@github.com:mstenta/puppet-gnome.git
+[submodule "modules/apt"]
+	path = modules/apt
+	url = https://github.com/evolvingweb/puppet-apt.git
+[submodule "modules/stdlib"]
+	path = modules/stdlib
+	url = https://github.com/puppetlabs/puppetlabs-stdlib.git
