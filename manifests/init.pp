@@ -22,6 +22,9 @@ node 'default' {
     email => $git_email,
   }
 
+  # Install Gnome.
+  include gnome
+
   # Install Chrome.
   include google-chrome
 }
