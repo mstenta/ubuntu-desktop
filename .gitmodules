@@ -1,0 +1,3 @@
+[submodule "modules/google-chrome"]
+	path = modules/google-chrome
+	url = https://github.com/mstenta/puppet-chrome.git
