@@ -54,4 +54,9 @@ node 'default' {
 
   # Install Chrome.
   include google-chrome
+
+  # Install Gimp
+  package { 'gimp':
+    ensure => present,
+  }
 }
