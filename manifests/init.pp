@@ -1,3 +1,6 @@
+Exec { path => "/usr/sbin/:/sbin:/usr/bin:/bin" }
+File { owner => 'root', group => 'root' }
+
 node 'default' {
 
   # Import settings.pp
