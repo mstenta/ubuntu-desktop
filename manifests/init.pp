@@ -29,6 +29,12 @@ node 'default' {
     email => $git_email,
   }
 
+  # Install GitG
+  package { 'gitg':
+    ensure => present,
+    require => Package['git-core'],
+  }
+
   # Install Gnome and enable extensions.
   include gnome
   gnome::extension { 'gnome-shell-extensions':
