@@ -6,6 +6,10 @@ node 'default' {
   # Import settings.pp
   import 'settings'
 
+  # Include Puppetlabs modules.
+  include stdlib
+  include apt
+
   # Define the apt-get update exec.
   exec { 'apt-get update':
     command => '/usr/bin/apt-get update',
@@ -25,8 +29,11 @@ node 'default' {
     email => $git_email,
   }
 
-  # Install Gnome.
+  # Install Gnome and enable extensions.
   include gnome
+  gnome::extension { 'gnome-shell-extensions':
+    ppa => 'ricotz/testing',
+  }
 
   # Install Chrome.
   include google-chrome
