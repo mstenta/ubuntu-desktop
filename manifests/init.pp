@@ -35,10 +35,21 @@ node 'default' {
     require => Package['git-core'],
   }
 
-  # Install Gnome and enable extensions.
+  # Install Gnome.
   include gnome
+
+  # Install common Gnome Shell extensions.
   gnome::extension { 'gnome-shell-extensions':
     ppa => 'ricotz/testing',
+    require => Class['gnome'],
+  }
+
+  # Configure Gnome favorites.
+  exec { 'gsettings set org.gnome.shell favorite-apps':
+    command => "gsettings set org.gnome.shell favorite-apps \"['nautilus.desktop', 'google-chrome.desktop', 'gedit.desktop', 'gnome-terminal.desktop', 'gitg.desktop', 'gimp.desktop']\"",
+    unless => "gsettings get org.gnome.shell favorite-apps | grep -q \"\\['nautilus.desktop', 'google-chrome.desktop', 'gedit.desktop', 'gnome-terminal.desktop', 'gitg.desktop', 'gimp.desktop'\\]\"",
+    user => $user,
+    require => Class['gnome'],
   }
 
   # Install Chrome.
