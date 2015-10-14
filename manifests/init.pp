@@ -28,7 +28,7 @@ node 'default' {
   # Install GitG.
   package { 'gitg':
     ensure => present,
-    require => Package['git-core'],
+    require => Package['git'],
   }
 
   # Install Gnome Shell.

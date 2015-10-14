@@ -1,7 +1,7 @@
 class git {
 
   # Install Git
-  package { 'git-core':
+  package { 'git':
     ensure => present,
   }
 }
