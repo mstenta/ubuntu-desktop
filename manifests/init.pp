@@ -45,4 +45,9 @@ node 'default' {
   package { 'gimp':
     ensure => present,
   }
+
+  # Install Nautilus "Open in terminal".
+  package { 'nautilus-open-terminal':
+    ensure => present,
+  }
 }
