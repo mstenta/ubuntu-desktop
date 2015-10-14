@@ -1,6 +1,6 @@
 # ubuntu-desktop
 
-A Puppet script for generating an Ubuntu desktop installation, preconfigured with my preferred software and configuration.
+A Puppet script for provisioning an Ubuntu desktop workstation.
 
 ## Features
 
@@ -16,9 +16,13 @@ A Puppet script for generating an Ubuntu desktop installation, preconfigured wit
 2. cd ubuntu-desktop
 3. Copy default.settings.pp to settings.pp and edit configuration in it.
 
+## Run it.
+
+./run
+
 ## Dependencies
 
-* Ubuntu 12.10
+* Ubuntu 14.04
 * Git
 * Puppet 2.7+
 

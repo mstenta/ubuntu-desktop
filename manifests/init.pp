@@ -25,7 +25,7 @@ node 'default' {
     email => $git_email,
   }
 
-  # Install GitG
+  # Install GitG.
   package { 'gitg':
     ensure => present,
     require => Package['git-core'],

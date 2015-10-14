@@ -1,4 +1,4 @@
-# User
+# User login to receive ~/.gitconfig.
 $user = 'testuser'
 
 # Git configuration.
