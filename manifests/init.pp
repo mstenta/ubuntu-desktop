@@ -6,10 +6,6 @@ node 'default' {
   # Import settings.pp
   import 'settings'
 
-  # Include Puppetlabs modules.
-  include stdlib
-  include apt
-
   # Define the apt-get update exec.
   exec { 'apt-get update':
     command => '/usr/bin/apt-get update',
@@ -35,25 +31,15 @@ node 'default' {
     require => Package['git-core'],
   }
 
-  # Install Gnome.
-  include gnome
-
-  # Install common Gnome Shell extensions.
-  gnome::extension { 'gnome-shell-extensions':
-    ppa => 'ricotz/testing',
-    require => Class['gnome'],
+  # Install Gnome Shell.
+  package { 'gnome-shell':
+    ensure => present,
   }
 
-  # Configure Gnome favorites.
-  exec { 'gsettings set org.gnome.shell favorite-apps':
-    command => "gsettings set org.gnome.shell favorite-apps \"['nautilus.desktop', 'google-chrome.desktop', 'gedit.desktop', 'gnome-terminal.desktop', 'gitg.desktop', 'gimp.desktop']\"",
-    unless => "gsettings get org.gnome.shell favorite-apps | grep -q \"\\['nautilus.desktop', 'google-chrome.desktop', 'gedit.desktop', 'gnome-terminal.desktop', 'gitg.desktop', 'gimp.desktop'\\]\"",
-    user => $user,
-    require => Class['gnome'],
+  # Install Chromium.
+  package { 'chromium-browser':
+    ensure => present,
   }
-
-  # Install Chrome.
-  include google-chrome
 
   # Install Gimp
   package { 'gimp':
