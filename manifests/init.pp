@@ -17,6 +17,16 @@ node 'default' {
     ensure => present,
   }
 
+  # Install Nautilus "Open in terminal".
+  package { 'nautilus-open-terminal':
+    ensure => present,
+  }
+
+  # Install gedit plugins.
+  package { 'gedit-plugins':
+    ensure => present,
+  }
+
   # Install and configure Git.
   include git
   class { 'git::config':
@@ -36,23 +46,13 @@ node 'default' {
     ensure => present,
   }
 
-  # Install gedit plugins.
-  package { 'gedit-plugins':
-    ensure => present,
-  }
-
   # Install Chromium.
   package { 'chromium-browser':
     ensure => present,
   }
 
-  # Install Gimp
+  # Install Gimp.
   package { 'gimp':
-    ensure => present,
-  }
-
-  # Install Nautilus "Open in terminal".
-  package { 'nautilus-open-terminal':
     ensure => present,
   }
 }
