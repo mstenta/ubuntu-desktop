@@ -51,6 +51,11 @@ node 'default' {
     ensure => present,
   }
 
+  # Install MySQL Workbench.
+  package { 'mysql-workbench':
+    ensure => present,
+  }
+
   # Install Gimp.
   package { 'gimp':
     ensure => present,

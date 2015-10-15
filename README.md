@@ -16,6 +16,7 @@ A Puppet script for provisioning an Ubuntu 14.04 desktop workstation.
 * Git, GitG, and default user configuration
 * Gnome Shell
 * Chromium
+* MySQL Workbench
 * Gimp
 * KeePassX
 * Pidgin
