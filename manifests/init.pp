@@ -36,6 +36,11 @@ node 'default' {
     ensure => present,
   }
 
+  # Install gedit plugins.
+  package { 'gedit-plugins':
+    ensure => present,
+  }
+
   # Install Chromium.
   package { 'chromium-browser':
     ensure => present,
