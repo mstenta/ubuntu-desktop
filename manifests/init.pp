@@ -55,4 +55,9 @@ node 'default' {
   package { 'gimp':
     ensure => present,
   }
+
+  # Install KeePassX.
+  package { 'keepassx':
+    ensure => present,
+  }
 }
