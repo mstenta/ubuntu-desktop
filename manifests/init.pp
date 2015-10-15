@@ -60,4 +60,10 @@ node 'default' {
   package { 'keepassx':
     ensure => present,
   }
+
+  # Install Pidgin.
+  package { 'pidgin':
+    ensure => present,
+  }
 }
+

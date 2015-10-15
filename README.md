@@ -18,4 +18,5 @@ A Puppet script for provisioning an Ubuntu 14.04 desktop workstation.
 * Chromium
 * Gimp
 * KeePassX
+* Pidgin
 
