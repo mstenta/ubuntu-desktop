@@ -80,5 +80,10 @@ node 'default' {
   package { 'vagrant':
     ensure => present,
   }
+
+  # Install Parcellite.
+  package { 'parcellite':
+    ensure => present,
+  }
 }
 

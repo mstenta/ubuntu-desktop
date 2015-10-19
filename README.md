@@ -22,4 +22,5 @@ A Puppet script for provisioning an Ubuntu 14.04 desktop workstation.
 * Pidgin
 * Virtual Box
 * Vagrant
+* Parcellite
 
