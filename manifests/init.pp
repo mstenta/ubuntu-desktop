@@ -72,9 +72,11 @@ node 'default' {
   }
 
   # Install Virtual Box.
-  package { 'virtualbox':
-    ensure => present,
-  }
+  # This has been disabled because apt-get install does not work with Ubuntu
+  # 14.04 + kernel 3.19. Install VirtualBox via the official .deb file instead.
+  #package { 'virtualbox':
+  #  ensure => present,
+  #}
 
   # Install Vagrant.
   package { 'vagrant':
