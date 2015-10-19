@@ -20,4 +20,6 @@ A Puppet script for provisioning an Ubuntu 14.04 desktop workstation.
 * Gimp
 * KeePassX
 * Pidgin
+* Virtual Box
+* Vagrant
 

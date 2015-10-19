@@ -70,5 +70,15 @@ node 'default' {
   package { 'pidgin':
     ensure => present,
   }
+
+  # Install Virtual Box.
+  package { 'virtualbox':
+    ensure => present,
+  }
+
+  # Install Vagrant.
+  package { 'vagrant':
+    ensure => present,
+  }
 }
 
