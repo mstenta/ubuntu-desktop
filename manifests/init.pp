@@ -87,5 +87,10 @@ node 'default' {
   package { 'parcellite':
     ensure => present,
   }
+
+  # Install byzanz-record.
+  package { 'byzanz':
+    ensure => present,
+  }
 }
 

@@ -23,4 +23,5 @@ A Puppet script for provisioning an Ubuntu 14.04 desktop workstation.
 * Virtual Box
 * Vagrant
 * Parcellite
+* byzanz-record
 
